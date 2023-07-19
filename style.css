@@ -1,0 +1,49 @@
+
+body{
+  background-color: aqua;
+}
+.container{
+  height: 500px;
+  width: 500px;
+  margin-left: 30%;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+}
+.total,h1{
+  text-align: center;
+  color: blue;
+}
+
+h1{
+  font-family: sans-serif;
+  font-weight: 900;
+}
+
+h2{
+  font-family: sans-serif;
+  color: gray;
+}
+
+#expensetbl{
+  margin: 25px 0;
+  font-size: 0.9em;
+  border-collapse: separate;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+#expensetbl thead tr{
+  background-color: aqua;
+  border-radius: 10px;
+  color: blue;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+
