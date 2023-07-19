@@ -22,10 +22,10 @@ function addItem(){
   if(expense_inp.val().trim()===""  || amount_inp.val().trim()==="") return;
 
   const to_do_item=$(toDoItemElement(expense_inp.val(), amount_inp.val()))
-  to_do_item.find(".remove",".nbr").click(function(){
-    let second=parseInt($(".nbr").text())
+  to_do_item.find(".remove").click(function(){
+    let second=parseInt(to_do_item.find(".nbr").text())
     let first=parseInt($("#amount").text())
-    $("#amount").text(first-second);
+    $("#amount").text(first - second);
   })
   to_do_item.find(".remove").click(function () {
     to_do_item.remove()
