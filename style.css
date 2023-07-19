@@ -2,6 +2,7 @@
 body{
   background-color: aqua;
 }
+
 .container{
   height: 500px;
   width: 500px;
@@ -15,6 +16,7 @@ body{
   justify-content: space-around;
   background-color: white;
 }
+
 .total,h1{
   text-align: center;
   color: blue;
