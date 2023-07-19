@@ -6,25 +6,33 @@ function toDoItemElement(text,num){
   </tr>`
 }
 
-function addAmount(n){
-  let first_value=parseInt($("#amountinp").val());
-  return n+=first_value;
+function addAmount(){
+  let first=parseInt($("#amount").text())
+  let second=parseInt($("#amountinp").val());
+  $("#amount").text(first+second);
 }
+
+
 
 function addItem(){
   const expense_inp=$("#expenseinp");
-  const amount_inp=$("#amountinp");
+  let amount_inp=$("#amountinp"); 
   const expense_tbl=$("#expensetbl");
-  var intamount=0
+  let intamount=0
   if(expense_inp.val().trim()===""  || amount_inp.val().trim()==="") return;
 
   const to_do_item=$(toDoItemElement(expense_inp.val(), amount_inp.val()))
+  to_do_item.find(".remove").click(function(){
+    let first=parseInt($("#amount").text())
+    let second=parseInt($("#amountinp").val())
+    $("#amount").text(first-second);
+  })
   to_do_item.find(".remove").click(function () {
     to_do_item.remove()
   })
+  
   expense_tbl.append(to_do_item)
-  addAmount(intamount)
-  $("#amount").text(intamount)
+  addAmount()
   expense_inp.val("")
   amount_inp.val("")
 
